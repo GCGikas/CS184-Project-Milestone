@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>  
+    div.padded {  
+      padding-top: 0px;  
+      padding-right: 100px;  
+      padding-bottom: 0.25in;  
+      padding-left: 100px;  
+    }  
+  </style> 
+<title>George Gikas  |  CS 184</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<br />
+<h1 align="middle">Real-time fluid simulation - Project Milestone</h1>
+    <h2 align="middle">George Gikas</h2>
+
+    <br>
+
+    <div class="padded">
+        <p>
+            For the milestone checkpoint, I will talk about progress made on the chosen
+            algorithm for my fluid simulation and will also talk about some changes that
+            I have made to my goals.
+        </p>
+
+        <h2 align="padded">Progress Summary</h2>
+        <p>
+            For my implementation of a solution to this problem, I chose to utilize the
+            algorithm presented in a research paper by Jos Stam at the University of
+            Toronto. The reason that I decided on this specific algorithm was because
+            it focuses on speed and believability over extreme accuracy. While the
+            Navier-Stokes equations are the standard for fluid simulation, they are
+            far too complex to run anywhere close to real-time. I have followed the
+            algorithm in the paper to implement a grid like system that tracks densities
+            of fluid at their respective locations. Using this system, density is exchanged
+            between neighboring locations as a function of fluid moving through an environment
+            to simulate actual flow. This process occurs through diffusion, which I also implemented
+            to perform the moving of density between neighbors. I have begun work on changes in velocities
+            in the flow, but have yet to finish the implementation. In addition, I have decided that I will
+            be continuing to use Unity as a simple way of showing the flow visually. I can place objects into the environment
+            that can represent the densities at each location, which can show how the fluid is moving.
+            I have prior experience working in Unity, so this portion should take less time than implementing the rest
+            of the algorithm.
+        </p>
+
+        <h2 align="padded">Preliminary Results</h2>
+        <p>
+            I do not have any visual results to present for the milestone so far. This
+            is because I am still working on implementing the 2D version of the
+            algorithm, and will attempt to extend it to 3D as described in the paper.
+            My progress for the first week is admittedly a bit slow, but I intend to spend
+            much time throughout this weekend and through the week to finish implementation
+            and begin construction of interactive components of the simulation. If it is
+            necessary for me to present images in the milestone, please let me know and I
+            will try to insert images as soon as the full 2D implementation is complete.
+        </p>
+
+        <h2 align="padded">Change of Goals</h2>
+        <p>
+            Because of the feedback that I received on the project proposal, I had to consider
+            the possibility that I would be unable to finish a 3D implementation in time. As a
+            result, the algorithm presented by Jos Stam appealed the most. It is a relatively less complex
+            algorithm when compared to the others I had researched, and according to the author
+            of the research paper can be extended to 3D without too many modifications. This means
+            that I would first be able to implement the 2D version before making the decision on 3D
+            simulation. As a result, I will have a 2D algorithm to fall back on should my attempt
+            to implement 3D fluid simulation end in failure for whatever reason. Regardless of whether or not my
+            final implementation is in 2D or 3D, I intend to make a decision on which version to use well before
+            the due date of the project, as I still need to create a way to show my algorithm in
+            action. This will most likely be either a video involving fluid traveling through an
+            environment or more preferably an actual method for user interaction with the fluid. This section of
+            the project should be far less difficult, as I have used the Unity engine in the past and have
+            experience in it.
+        </p>
+
+    </div>
+</body>
+</html>
+
+
+
+
